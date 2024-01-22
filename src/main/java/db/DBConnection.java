@@ -19,7 +19,10 @@ public class DBConnection {
             return conn;
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            // 원인파악을 하기 위해서 printStackTrace를 사용하자.
+            e.printStackTrace();
         }
+        // 리턴을 잊지 말자.
+        return null;
     }
 }
